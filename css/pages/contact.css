@@ -1,0 +1,24 @@
+/* contact: info cards, booking form with photo, map, centred FAQ */
+.contact-cards .link { word-break: break-word; }
+.book-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s6); align-items: start; }
+@media (min-width: 1024px) { .book-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(28px, 3vw, 48px); } }
+.book-side { display: grid; gap: var(--s5); }
+.book-photo { border-radius: var(--r-xl); overflow: hidden; background: var(--tint-2); padding: 10px; aspect-ratio: 4 / 3; }
+.book-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--r-xl) - 8px); }
+.book-next { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(20px, 3vw, 28px); }
+.book-next h3 { margin-bottom: var(--s3); }
+.book-next .how-steps { margin: 0; }
+.form-actions .field-hint { font-size: var(--fs-small); }
+.check a { font-weight: 600; }
+
+.map-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s5); align-items: stretch; }
+@media (min-width: 1024px) { .map-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); } }
+.centre-list { display: grid; gap: var(--s4); align-content: start; }
+.centre { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 18px 22px; }
+.centre h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-size: 1.125rem; }
+.centre p { color: var(--muted); font-size: var(--fs-small); margin-top: 6px; }
+.centre a { font-weight: 600; color: var(--primary-ink); }
+.map-frame { border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--line); background: var(--tint-2); min-height: 340px; }
+.map-frame iframe { display: block; width: 100%; height: 100%; min-height: 340px; border: 0; }
+#faq .intro a { font-weight: 600; }
+.book-next .how-steps li { border: 0; background: none; padding: 0; }

@@ -1,0 +1,43 @@
+/* dashboard-billing */
+@import url("dash-common.css");
+.bill-top { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+@media (min-width: 1000px) { .bill-top { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); } }
+.balance-card { position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.balance-card::after { content: ""; position: absolute; inset-inline-end: -70px; bottom: -70px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, var(--blob-a), transparent 70%); pointer-events: none; }
+.bal-amt { font-family: var(--f-head); font-weight: 600; font-size: clamp(2.25rem, 1.8rem + 2vw, 3rem); line-height: 1.1; color: var(--ink); }
+.bal-sub { color: var(--muted); font-size: var(--fs-small); margin-top: 6px; }
+.bal-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--s5); position: relative; z-index: 1; }
+.cover-list { display: grid; gap: 14px; }
+.cover { border: 1px solid var(--line); border-radius: var(--r-md); padding: 14px 16px; display: grid; gap: 8px; }
+.cover-top { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+.cover-top strong { font-family: var(--f-head); font-weight: 600; }
+.cover-top span, .cover p { color: var(--muted); font-size: var(--fs-small); }
+.cover .meter + p { font-size: var(--fs-xs); }
+#invChips { gap: 6px; }
+.inv-table { min-width: 860px; }
+.pm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 14px; }
+.pm { border: 1px solid var(--line); border-radius: var(--r-lg); padding: 16px 18px; display: grid; gap: 12px; background: var(--bg); }
+.pm.is-primary { border-color: var(--primary); background: var(--tint); }
+.pm-top { display: flex; align-items: center; gap: 12px; }
+.pm-logo { width: 52px; height: 36px; border-radius: 8px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-family: var(--f-head); font-weight: 700; font-size: .75rem; letter-spacing: .04em; flex: none; }
+.pm-logo--upi { background: var(--primary); color: var(--on-primary); }
+.pm-top div { display: grid; min-width: 0; }
+.pm-top span { color: var(--muted); font-size: var(--fs-xs); overflow-wrap: anywhere; }
+.pm-acts { display: flex; gap: 8px; flex-wrap: wrap; }
+.pay-sum { margin-top: var(--s4); background: var(--tint); border-radius: var(--r-md); padding: 14px 16px; }
+#payForm { margin-top: var(--s4); }
+.pay-methods { display: grid; gap: 8px; margin-bottom: var(--s4); }
+.pay-opt { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: var(--r-md); cursor: pointer; font-size: var(--fs-small); }
+.pay-opt input { width: 18px; height: 18px; accent-color: var(--primary); flex: none; }
+.pay-opt:has(input:checked) { border-color: var(--primary); background: var(--tint); }
+.card-fields[hidden] { display: none; }
+.form-grid { min-width: 0; }
+.cover-btn { justify-self: start; }
+.pm-top .pm-logo { color: #fff; }
+.pm-top .pm-logo--upi { color: var(--on-primary); }
+.inv-table td:first-child { white-space: nowrap; }
+.bal-foot { margin-top: auto; padding-top: var(--s5); display: grid; gap: 10px; position: relative; z-index: 1; }
+.bal-foot > div { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: var(--fs-small); padding-top: 10px; border-top: 1px solid var(--line-strong); }
+.bal-foot dt { color: var(--muted); }
+.bal-foot dd { font-weight: 600; }
+.pm-top .pm-default { margin-inline-start: auto; padding: 3px 10px; border-radius: 999px; background: var(--primary); color: var(--on-primary); font-size: var(--fs-xs); font-weight: 700; flex: none; }

@@ -1,0 +1,87 @@
+---
+layout: app
+title: Overview | Tidewell patient dashboard
+description: Your Tidewell overview: next dialysis session, monthly progress, latest labs, reminders, care team and invoices.
+app_nav: overview
+app_title: Overview
+css: dashboard
+js: dashboard
+---
+<div class="page-head ov-head">
+  <div class="ov-hello">
+    <img class="ov-avatar" src="images/user-1-160.webp" width="160" height="160" alt="Michael Grant">
+    <div><h1 id="greet">Good morning, Michael</h1><p id="greetSub">Here is what is coming up in your care.</p></div>
+  </div>
+  <div class="page-head-actions"><a class="btn btn-primary" href="dashboard-schedule.html">Book a session</a></div>
+</div>
+
+<div class="ov-top">
+  <section class="widget widget--mint next-card" aria-labelledby="next-title">
+    <div class="w-head"><h2 id="next-title">Next session</h2><span id="nextStatus"></span></div>
+    <div id="nextSession"></div>
+  </section>
+  <section class="widget ring-card" aria-labelledby="ring-title">
+    <div class="w-head"><h2 id="ring-title">Sessions this month</h2></div>
+    <div class="ring-row">
+      <div class="ring" id="monthRing" style="--p: 0" role="img" aria-label="Sessions completed this month">
+        <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="52"/><circle class="ring-value" cx="60" cy="60" r="52" pathLength="100"/></svg>
+        <div class="ring-label"><strong id="ringDone">0</strong><span id="ringOf">of 0 sessions</span></div>
+      </div>
+      <ul class="ring-legend" id="ringLegend"></ul>
+    </div>
+    <h3 class="week-title">This week</h3>
+    <ol class="week-dots" id="weekDots" aria-label="Your dialysis days this week"></ol>
+  </section>
+</div>
+
+<div class="ov-grid">
+  <section class="widget labs-card" aria-labelledby="labs-title">
+    <div class="w-head"><h2 id="labs-title">Latest labs</h2><a class="link" href="dashboard-records.html">All results</a></div>
+    <div class="chips metric-chips" role="group" aria-label="Choose a lab result" id="labChips">
+      <button class="chip" type="button" data-metric="hb" aria-pressed="true">Haemoglobin</button>
+      <button class="chip" type="button" data-metric="k" aria-pressed="false">Potassium</button>
+      <button class="chip" type="button" data-metric="ktv" aria-pressed="false">Kt/V</button>
+    </div>
+    <div class="lab-now" id="labNow" aria-live="polite"></div>
+    <div id="labChart" class="mini-chart"></div>
+    <dl class="kv lab-kv" id="labKv"></dl>
+  </section>
+
+  <section class="widget reminders-card" aria-labelledby="rem-title">
+    <div class="w-head"><h2 id="rem-title">Today's reminders</h2></div>
+    <div class="fluid">
+      <div class="fluid-top"><span class="pebble pebble--sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg></span>
+        <div><strong>Fluid allowance</strong><span id="fluidText">0 of 1,000 ml</span></div></div>
+      <div class="fluid-bar" role="progressbar" aria-label="Fluid taken today" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0" id="fluidBar"><span></span></div>
+      <div class="fluid-actions"><button class="btn btn-secondary btn-sm" type="button" data-fluid="150">+ 150 ml cup</button><button class="btn btn-secondary btn-sm" type="button" data-fluid="250">+ 250 ml glass</button><button class="btn btn-secondary btn-sm" type="button" id="fluidUndo">Undo</button></div>
+    </div>
+    <h3 class="rem-sub">Medicines</h3>
+    <ul class="med-list" id="medList"></ul>
+  </section>
+</div>
+
+<div class="ov-grid">
+  <section class="widget" aria-labelledby="team-title">
+    <div class="w-head"><h2 id="team-title">Your care team</h2><a class="link" href="care-team.html">Meet the team</a></div>
+    <ul class="team-list" id="teamList"></ul>
+  </section>
+  <section class="widget" aria-labelledby="inv-title">
+    <div class="w-head"><h2 id="inv-title">Recent invoices</h2><a class="link" href="dashboard-billing.html">Billing</a></div>
+    <div class="row-list" id="invList"></div>
+  </section>
+</div>
+
+<div class="modal" id="m-message" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="m-message-title" tabindex="-1">
+    <button class="modal-x" type="button" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="m-message-title">Send a message</h2>
+    <p id="msgTo">Your care team usually replies within one working day. For anything urgent, call the unit or 108.</p>
+    <form class="form" data-validate novalidate id="msgForm">
+      <div class="field"><label for="msg-topic">Topic</label><select id="msg-topic" name="topic" required><option value="">Choose a topic</option><option>Question about my treatment</option><option>Medicines</option><option>Diet and fluids</option><option>Something else</option></select></div>
+      <div class="field"><label for="msg-text">Message</label><textarea id="msg-text" name="message" rows="4" placeholder="Write your message" required></textarea></div>
+      <div class="modal-actions"><button class="btn btn-secondary" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="submit">Send message</button></div>
+    </form>
+  </div>
+</div>
+<script defer src="js/pages/dashboard-data.js"></script>

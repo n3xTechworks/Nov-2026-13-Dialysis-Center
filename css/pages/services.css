@@ -1,0 +1,13 @@
+/* services page styles */
+#treatments .card-media img { object-position: 50% 40%; }
+.service-card--support .card-media img { object-position: 50% 35%; }
+.compare-wrap { max-width: 1120px; margin-inline: auto; }
+.compare-wrap:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+.table--compare { min-width: 760px; }
+.table--compare thead th { color: var(--ink); font-family: var(--f-head); font-weight: 500; font-size: var(--fs-small); white-space: normal; background: var(--tint); vertical-align: bottom; }
+.table--compare thead th:first-child { color: var(--muted); }
+.table--compare td, .table--compare th[scope="row"] { vertical-align: top; }
+.table--compare tbody tr:last-child td { font-weight: 600; color: var(--primary-ink); }
+.table-hint { margin-top: 10px; text-align: center; font-size: var(--fs-xs); color: var(--muted); }
+@media (min-width: 1100px) { .table-hint { display: none; } }
+.cost-cards { max-width: 1040px; margin-inline: auto; }

@@ -1,0 +1,124 @@
+---
+layout: app
+title: Profile | Tidewell patient dashboard
+description: Your personal and medical details, emergency contact, notifications and account security.
+app_nav: profile
+app_title: Profile
+css: dashboard-profile
+js: dashboard-profile
+---
+<div class="page-head"><div><h1>Profile and settings</h1><p>Keep these up to date so your care team always has the right details.</p></div></div>
+
+<section class="widget profile-hero widget--mint" aria-label="Summary">
+  <img class="prof-photo" src="images/user-1-800.webp" width="800" height="800" alt="Michael Grant" id="profPhoto">
+  <div class="prof-id"><h2 id="profName">Michael Grant</h2><p id="profMeta">Patient ID</p>
+    <div class="prof-badges" id="profBadges"></div></div>
+  <button class="btn btn-secondary btn-sm" type="button" id="photoBtn">Change photo</button>
+</section>
+
+<div class="profile-grid">
+  <div class="profile-main">
+    <section class="widget" aria-labelledby="pd-title">
+      <div class="w-head"><h2 id="pd-title">Personal details</h2></div>
+      <form class="form" data-validate novalidate data-no-reset id="personalForm" data-success-message="Your personal details have been saved.">
+        <div class="form-grid">
+          <div class="field"><label for="pf-first">First name</label><input id="pf-first" name="first-name" type="text" autocomplete="given-name" placeholder="Michael" required></div>
+          <div class="field"><label for="pf-last">Last name</label><input id="pf-last" name="last-name" type="text" autocomplete="family-name" placeholder="Grant" required></div>
+          <div class="field"><label for="pf-email">Email</label><input id="pf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          <div class="field"><label for="pf-phone">Mobile</label><input id="pf-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="9840012345" required></div>
+          <div class="field"><label for="pf-dob">Date of birth</label><input id="pf-dob" name="dob" type="date" data-rule="required" min="1900-01-01" required></div>
+          <div class="field"><label for="pf-centre">Home centre</label><select id="pf-centre" name="centre" required></select></div>
+          <div class="field field--full"><label for="pf-addr">Address</label><input id="pf-addr" name="address" type="text" autocomplete="street-address" placeholder="House number, street, area, city, PIN" required></div>
+        </div>
+        <div class="form-actions"><button class="btn btn-secondary" type="button" data-discard="personalForm">Discard changes</button><button class="btn btn-primary" type="submit">Save details</button></div>
+        <p class="form-success" data-form-success role="status" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span data-success-text>Saved.</span></p>
+      </form>
+    </section>
+
+    <section class="widget" aria-labelledby="md-title">
+      <div class="w-head"><h2 id="md-title">Medical basics</h2><span class="field-hint">Confirmed by your nurse at each monthly review</span></div>
+      <form class="form" data-validate novalidate data-no-reset id="medForm" data-success-message="Medical details saved. Your nurse will confirm them at your next session.">
+        <div class="form-grid">
+          <div class="field"><label for="md-blood">Blood group</label><select id="md-blood" name="blood-group" required><option value="">Choose</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></div>
+          <div class="field"><label for="md-since">On dialysis since</label><input id="md-since" name="since" type="month" placeholder="2023-03" required></div>
+          <div class="field"><label for="md-dry">Dry weight (kg)</label><input id="md-dry" name="dry-weight" type="text" inputmode="decimal" placeholder="68.5" required><p class="field-error" id="md-dry-error"></p></div>
+          <div class="field"><label for="md-access">Access type</label><select id="md-access" name="access" required><option value="">Choose</option><option>AV fistula, left forearm</option><option>AV fistula, right forearm</option><option>AV fistula, upper arm</option><option>AV graft</option><option>Tunnelled catheter</option><option>Peritoneal catheter</option></select></div>
+          <div class="field field--full"><label for="md-allergy">Allergies</label><input id="md-allergy" name="allergies" type="text" placeholder="For example: penicillin, latex, none known"></div>
+        </div>
+        <div class="form-actions"><button class="btn btn-secondary" type="button" data-discard="medForm">Discard changes</button><button class="btn btn-primary" type="submit">Save medical details</button></div>
+        <p class="form-success" data-form-success role="status" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span data-success-text>Saved.</span></p>
+      </form>
+    </section>
+
+    <section class="widget" aria-labelledby="em-title">
+      <div class="w-head"><h2 id="em-title">Emergency contact</h2></div>
+      <form class="form" data-validate novalidate data-no-reset id="emForm" data-success-message="Emergency contact saved.">
+        <div class="form-grid">
+          <div class="field"><label for="em-name">Full name</label><input id="em-name" name="contact-name" type="text" placeholder="Sarah Grant" required></div>
+          <div class="field"><label for="em-rel">Relationship</label><select id="em-rel" name="relation" required><option value="">Choose</option><option>Spouse</option><option>Parent</option><option>Son or daughter</option><option>Sibling</option><option>Friend</option><option>Carer</option></select></div>
+          <div class="field field--full"><label for="em-phone">Phone</label><input id="em-phone" name="phone" type="tel" inputmode="tel" placeholder="9840098765" required></div>
+        </div>
+        <div class="form-actions"><button class="btn btn-secondary" type="button" data-discard="emForm">Discard changes</button><button class="btn btn-primary" type="submit">Save contact</button></div>
+        <p class="form-success" data-form-success role="status" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span data-success-text>Saved.</span></p>
+      </form>
+    </section>
+  </div>
+
+  <div class="profile-side">
+    <section class="widget" aria-labelledby="nt-title">
+      <div class="w-head"><h2 id="nt-title">Notifications</h2></div>
+      <ul class="setting-list">
+        <li><label class="switch"><input type="checkbox" role="switch" data-notify="sessionSms"> Session reminders by SMS</label></li>
+        <li><label class="switch"><input type="checkbox" role="switch" data-notify="sessionEmail"> Session reminders by email</label></li>
+        <li><label class="switch"><input type="checkbox" role="switch" data-notify="fluid"> Daily fluid check-in</label></li>
+        <li><label class="switch"><input type="checkbox" role="switch" data-notify="meds"> Medicine reminders</label></li>
+        <li><label class="switch"><input type="checkbox" role="switch" data-notify="labs"> New lab results</label></li>
+        <li><label class="switch"><input type="checkbox" role="switch" data-notify="billing"> Invoices and payments</label></li>
+        <li><label class="switch"><input type="checkbox" role="switch" data-notify="news"> Kidney-care tips and news</label></li>
+      </ul>
+    </section>
+    <section class="widget" aria-labelledby="sc-title">
+      <div class="w-head"><h2 id="sc-title">Security</h2></div>
+      <ul class="setting-list">
+        <li class="setting-row"><div><strong>Password</strong><span id="pwChanged">Last changed</span></div><button class="btn btn-secondary btn-sm" type="button" data-modal-open="m-pw">Change</button></li>
+        <li class="setting-row"><div><strong>Two-step sign-in</strong><span id="tfaText">Off</span></div><label class="switch"><input type="checkbox" role="switch" id="tfaSwitch" aria-label="Two-step sign-in"></label></li>
+        <li class="setting-row"><div><strong>Signed-in devices</strong><span id="devText">This browser and 1 phone</span></div><button class="btn btn-secondary btn-sm" type="button" id="signoutBtn">Sign out others</button></li>
+        <li class="setting-row"><div><strong>Download my data</strong><span>Sessions, labs and invoices</span></div><button class="btn btn-secondary btn-sm" type="button" id="dataBtn">Download</button></li>
+      </ul>
+    </section>
+    <section class="widget danger-zone" aria-labelledby="dz-title">
+      <div class="w-head"><h2 id="dz-title">Delete account</h2></div>
+      <p>This removes your online account. Your medical records stay with the centre, as the law requires.</p>
+      <button class="btn btn-danger" type="button" data-modal-open="m-delete">Delete my account</button>
+    </section>
+  </div>
+</div>
+
+<div class="modal" id="m-pw" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="m-pw-title" tabindex="-1">
+    <button class="modal-x" type="button" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="m-pw-title">Change password</h2>
+    <p>At least 8 characters, with a letter and a number.</p>
+    <form class="form" data-validate novalidate id="pwForm">
+      <div class="field"><label for="pw-cur">Current password</label><div class="pw-wrap"><input id="pw-cur" name="current-password" type="password" autocomplete="current-password" placeholder="Your current password" required><button class="pw-toggle" type="button" data-pw-toggle aria-label="Show password">Show</button></div></div>
+      <div class="field"><label for="pw-new">New password</label><div class="pw-wrap"><input id="pw-new" name="new-password" type="password" autocomplete="new-password" placeholder="At least 8 characters" required><button class="pw-toggle" type="button" data-pw-toggle aria-label="Show password">Show</button></div></div>
+      <div class="field"><label for="pw-new2">Confirm new password</label><div class="pw-wrap"><input id="pw-new2" name="confirm-password" type="password" autocomplete="new-password" data-rule="password" data-match="#pw-new" placeholder="Repeat the new password" required><button class="pw-toggle" type="button" data-pw-toggle aria-label="Show password">Show</button></div></div>
+      <div class="modal-actions"><button class="btn btn-secondary" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="submit">Update password</button></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="m-delete" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="m-delete-title" tabindex="-1">
+    <button class="modal-x" type="button" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="m-delete-title">Delete your account?</h2>
+    <p>You will be logged out and your bookings, reminders and saved cards will be removed from this portal. Upcoming sessions stay booked with the centre unless you call to cancel.</p>
+    <form class="form" data-validate novalidate id="delForm">
+      <div class="field"><label for="del-confirm">Type DELETE to confirm</label><input id="del-confirm" name="confirm-text" type="text" autocomplete="off" placeholder="DELETE" required><p class="field-error" id="del-confirm-error"></p></div>
+      <div class="modal-actions"><button class="btn btn-secondary" type="button" data-modal-close>Keep my account</button><button class="btn btn-danger" type="submit">Delete account</button></div>
+    </form>
+  </div>
+</div>
+<script defer src="js/pages/dashboard-data.js"></script>

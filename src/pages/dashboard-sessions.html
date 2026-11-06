@@ -1,0 +1,44 @@
+---
+layout: app
+title: Session history | Tidewell patient dashboard
+description: Every dialysis session you have had at Tidewell, with weights, blood pressure, fluid removed, Kt/V and nurse notes.
+app_nav: sessions
+app_title: Session history
+css: dashboard-sessions
+js: dashboard-sessions
+---
+<div class="page-head"><div><h1>Session history</h1><p>Every session, with the numbers your care team watches. Select a row for the full record.</p></div>
+  <div class="page-head-actions"><button class="btn btn-primary" type="button" id="exportBtn">Export CSV</button></div></div>
+
+<div class="stat-grid" id="stats" aria-label="Last 30 days"></div>
+
+<section class="widget" aria-labelledby="h-title">
+  <div class="w-head"><h2 id="h-title">All sessions</h2><p class="result-note" id="resultNote" aria-live="polite"></p></div>
+  <div class="toolbar sess-toolbar">
+    <div class="chips" role="group" aria-label="Filter by status" id="statusChips">
+      <button class="chip" type="button" data-status="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-status="completed" aria-pressed="false">Completed</button>
+      <button class="chip" type="button" data-status="shortened" aria-pressed="false">Shortened</button>
+      <button class="chip" type="button" data-status="missed" aria-pressed="false">Missed</button>
+    </div>
+    <div class="toolbar-filters">
+      <div class="field"><label for="fMonth" class="sr-only">Month</label><select id="fMonth"><option value="all">All months</option></select></div>
+      <div class="field"><label for="fCentre" class="sr-only">Centre</label><select id="fCentre"><option value="all">All centres</option></select></div>
+      <button class="btn btn-secondary btn-sm" type="button" id="resetFilters">Reset filters</button>
+    </div>
+  </div>
+  <div class="table-wrap"><table class="table sess-table">
+    <thead><tr><th scope="col">Date</th><th scope="col">Centre</th><th scope="col">Duration</th><th scope="col">Weight pre / post</th><th scope="col">Fluid removed</th><th scope="col">Kt/V</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Details</span></th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <div class="more-row"><button class="btn btn-secondary" type="button" id="moreBtn" hidden>Show more</button></div>
+  <div class="empty" id="noRows" hidden><h3>No sessions match</h3><p>Try a different month, centre or status.</p></div>
+</section>
+
+<div class="drawer-scrim" hidden></div>
+<aside class="drawer" id="sDrawer" role="dialog" aria-modal="true" aria-labelledby="dr-title" tabindex="-1" hidden>
+  <div class="drawer-head"><div><h2 id="dr-title">Session</h2><p id="drSub"></p></div><button class="drawer-x" type="button" data-drawer-close aria-label="Close details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div id="drBody"></div>
+  <div class="drawer-actions"><button class="btn btn-primary" type="button" id="drDownload">Download summary</button><button class="btn btn-secondary" type="button" id="drQuery">Ask about this session</button></div>
+</aside>
+<script defer src="js/pages/dashboard-data.js"></script>

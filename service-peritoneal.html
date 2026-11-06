@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peritoneal dialysis | Tidewell Dialysis Centre</title>
+  <meta name="description" content="Needle-free dialysis using the lining of your own tummy, done at home.">
+  <meta name="theme-color" content="#0E7C86">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('tidewell-theme');
+        var d = localStorage.getItem('tidewell-dir');
+        if (t !== 'dark' && t !== 'light') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('dir', d === 'rtl' ? 'rtl' : 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/service-pd-1600.webp" imagesrcset="images/service-pd-800.webp 800w, images/service-pd-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/service.css">
+  <script defer src="data/site-data.js"></script>
+  <script defer src="js/validation.js"></script>
+  <script defer src="js/site.js"></script>
+  <script defer src="js/pages/service.js"></script>
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Tidewell Dialysis Centre, home">
+          <svg class="brand-mark" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+            <rect width="48" height="48" rx="14" class="mark-bg"/>
+            <path d="M24 9c5.5 7 9 11.6 9 16.2A9 9 0 0 1 15 25.2C15 20.6 18.5 16 24 9z" class="mark-drop"/>
+            <path d="M17.2 27.4c2.3-1.6 4.5-1.6 6.8 0s4.5 1.6 6.8 0" class="mark-wave"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Tidewell</span><span class="brand-sub">Dialysis Centre</span></span>
+        </a>
+
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="home-sub">Home <svg class="chev" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <ul class="submenu" id="home-sub"><li><a href="index.html" >Home 1</a></li><li><a href="home-2.html" >Home 2</a></li></ul>
+          </li>
+          <li><a class="nav-link" href="about.html" >About</a></li>
+          <li><a class="nav-link" href="services.html" aria-current="page">Services</a></li>
+          <li><a class="nav-link" href="care-team.html" >Care Team</a></li>
+          <li><a class="nav-link" href="blog.html" >Blog</a></li>
+          <li><a class="nav-link" href="contact.html" >Contact</a></li>
+          <li><a class="nav-link" href="dashboard.html" >Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ctl ctl-icon" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="ctl ctl-icon" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span class="dir-txt" aria-hidden="true"><span class="d-to-rtl">RTL</span><span class="d-to-ltr">LTR</span></span></button>
+        <a class="ctl btn btn-secondary btn-login" href="login.html" data-nav-login>Log in</a>
+        <a class="ctl btn btn-primary" href="contact.html#book" data-nav-cta>Book a visit</a>
+      </div>
+
+      <button class="ctl ctl-icon menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="i-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <nav class="container" aria-label="Mobile">
+        <p class="mm-label">Home</p>
+        <ul class="mm-list mm-sub"><li><a href="index.html" >Home 1</a></li><li><a href="home-2.html" >Home 2</a></li></ul>
+        <ul class="mm-list">
+          <li><a href="about.html" >About</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="care-team.html" >Care Team</a></li>
+          <li><a href="blog.html" >Blog</a></li>
+          <li><a href="contact.html" >Contact</a></li>
+          <li><a href="dashboard.html" >Dashboard</a></li>
+        </ul>
+        <a class="btn btn-secondary btn-block mm-login" href="login.html">Log in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+  <section class="page-hero" aria-labelledby="hero-title">
+    <img class="page-hero-bg" src="images/service-pd-1600.webp" srcset="images/service-pd-800.webp 800w, images/service-pd-1600.webp 1600w" sizes="100vw" width="1600" height="1067" alt="A nurse showing a patient how to handle a peritoneal dialysis fluid bag" fetchpriority="high">
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="container page-hero-content">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="services.html">Services</a><span aria-hidden="true">/</span><span aria-current="page">Peritoneal dialysis</span></nav>
+      <p class="eyebrow">Treatment</p>
+      <h1 id="hero-title">Peritoneal dialysis</h1>
+      <p>Needle-free dialysis using the lining of your own tummy, done at home.</p>
+    </div>
+    <svg class="hero-curve" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 80V40C240 8 480 0 720 18s480 46 720 22v40z"/></svg>
+  </section>
+<!-- Service detail template (front matter of the page: template: service + service: <slug>). Data: data/services.json -->
+<section class="section" id="overview" aria-labelledby="ov-title">
+  <div class="container">
+    <div class="split">
+      <div class="split-body">
+        <p class="eyebrow">Who it suits</p>
+        <h2 id="ov-title">Is this treatment right for you?</h2>
+        <p>A soft tube in your abdomen lets cleansing fluid flow in and out. Do four short exchanges by hand during the day (CAPD) or let a quiet machine work overnight (APD).</p>
+        <ul class="checklist"><li>People who still pass some urine (residual kidney function)</li><li>Those who want to avoid needles</li><li>Patients who travel or live far from a centre</li></ul>
+      </div>
+      <div class="panel panel--accent" id="facts"><h2>At a glance</h2><dl class="spec-grid"><div><dt>Exchange</dt><dd>30 to 40 min (CAPD)</dd></div><div><dt>How often</dt><dd>Daily, at home</dd></div><div><dt>Where</dt><dd>Home, work or travel</dd></div><div><dt>From</dt><dd>₹32,000 per month</dd></div></dl><p class="panel-note">Needle-free dialysis using the lining of your own tummy, done at home.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight-top" id="benefits" aria-labelledby="ben-title">
+  <div class="container">
+    <header class="intro intro--center"><p class="eyebrow">Benefits</p><h2 id="ben-title">Why people choose peritoneal dialysis</h2><p>A needle-free treatment that works gently every day and travels with you.</p></header>
+    <div class="cards cards--4">
+      <article class="card card--rows-3 card--accent"><span class="pebble"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><h3 class="card-title">Needle-free and gentle</h3><p class="card-text">No needles and no blood outside the body. Fluid is removed slowly, so many people feel steadier.</p></article>
+      <article class="card card--rows-3 card--accent"><span class="pebble pebble--coral"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3 class="card-title">Fits around your day</h3><p class="card-text">Four short exchanges by hand, or let an APD machine work quietly while you sleep.</p></article>
+      <article class="card card--rows-3 card--accent"><span class="pebble pebble--sand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3 class="card-title">Protects kidney function</h3><p class="card-text">PD often helps you keep the kidney function you still have for longer.</p></article>
+      <article class="card card--rows-3 card--accent"><span class="pebble"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5a5 5 0 0 1 5.5 5"/></svg></span><h3 class="card-title">Work and travel freely</h3><p class="card-text">Supplies can be delivered across India, so holidays and work trips stay possible.</p></article>
+    </div>
+  </div>
+</section>
+
+<div class="wave wave--bg-tint" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path d="M0 64V30C160 6 320 0 480 12s320 40 480 34 320-34 480-40v58z"/></svg></div>
+<section class="section section--tint" id="how" aria-labelledby="how-title">
+  <div class="container container-narrow">
+    <header class="intro intro--center"><p class="eyebrow">How it works</p><h2 id="how-title">What happens, step by step</h2><p>Your nurse explains every step before it happens. Nothing is rushed.</p></header>
+    <ol class="how-steps"><li><span class="how-num" aria-hidden="true">1</span><p>A surgeon places a soft PD catheter in a short day procedure</p></li><li><span class="how-num" aria-hidden="true">2</span><p>After two weeks of healing, a nurse trains you over five to seven days</p></li><li><span class="how-num" aria-hidden="true">3</span><p>Fluid sits in the abdomen and draws out waste, then is drained and replaced</p></li><li><span class="how-num" aria-hidden="true">4</span><p>You record each exchange; we review your results at monthly clinics</p></li></ol>
+  </div>
+</section>
+<div class="wave wave--tint-bg" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false"><path d="M0 64V40C200 16 400 4 620 20s420 38 600 22 220-18 220-18v40z"/></svg></div>
+
+<section class="section" id="timeline" aria-labelledby="tl-title">
+  <div class="container">
+    <header class="intro intro--center"><p class="eyebrow">A typical session</p><h2 id="tl-title">Your session timeline</h2><p>Times are examples; your shift is agreed with you.</p></header>
+    <ol class="timeline"><li><span class="tl-year">Day 0</span><h3>Catheter placement</h3><p>Day procedure under local anaesthetic.</p></li><li><span class="tl-year">Days 1 to 14</span><h3>Healing</h3><p>Dressing checks with our nurse.</p></li><li><span class="tl-year">Week 3</span><h3>Training</h3><p>Five to seven days of hands-on practice.</p></li><li><span class="tl-year">Week 4</span><h3>Home start</h3><p>Supplies delivered and a nurse phone check the next morning.</p></li></ol>
+  </div>
+</section>
+
+<section class="section section--sand" id="bring" aria-labelledby="bring-title">
+  <div class="container">
+    <div class="split">
+      <div class="split-body"><p class="eyebrow">Be prepared</p><h2 id="bring-title">What to bring</h2><ul class="checklist"><li>Loose, comfortable clothes for training</li><li>A clean, well-lit spot at home to describe to your nurse</li><li>Your daily fluid and weight diary</li></ul></div>
+      <div class="panel panel--sand" id="cost"><h2>Cost and insurance</h2><p class="price"><span class="price-from">From</span> ₹32,000 <span class="price-note">per month</span></p><p>A monthly package covers fluid, supplies, home delivery and nurse support. The catheter procedure is billed separately and is often covered by insurance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <header class="intro intro--center"><p class="eyebrow">Questions</p><h2 id="faq-title">Common questions</h2><p>Ask us anything else at your first visit.</p></header>
+    <div class="faq"><div class="faq-list"><details class="faq-item" name="faq-peritoneal"><summary>Can I swim or bathe?</summary><div class="faq-answer"><p>Showers are fine once the exit site has healed. Swimming is possible in clean pools with a protective dressing; ask your nurse first.</p></div></details><details class="faq-item" name="faq-peritoneal"><summary>What about infection?</summary><div class="faq-answer"><p>Careful hand-washing and good technique keep peritonitis rare. Call us at once if the fluid looks cloudy.</p></div></details><details class="faq-item" name="faq-peritoneal"><summary>Can I switch to haemodialysis later?</summary><div class="faq-answer"><p>Yes. Many people move between therapies as their needs change.</p></div></details></div></div>
+  </div>
+</section>
+
+<section class="section section--tint" id="other" aria-labelledby="other-title">
+  <div class="container">
+    <header class="intro intro--center"><p class="eyebrow">Compare</p><h2 id="other-title">Other ways to dialyse</h2><p>Many people change treatment over the years. We support every option.</p></header>
+    <div class="cards cards--trio"><article class="card card--rows-4 card--accent treat-tile">
+  <p class="eyebrow treat-kicker">Haemodialysis</p>
+  <h3 class="card-title"><a href="service-haemodialysis.html">In-centre haemodialysis</a></h3>
+  <p class="card-text">Three calm sessions a week in a bright bay, with a nurse always within sight.</p>
+  <a class="link" href="service-haemodialysis.html">Learn about haemodialysis <svg class="flip" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card card--rows-4 card--accent treat-tile">
+  <p class="eyebrow treat-kicker">Home dialysis</p>
+  <h3 class="card-title"><a href="service-home-dialysis.html">Home haemodialysis</a></h3>
+  <p class="card-text">Dialysis on your own timetable, with training and a 24/7 helpline behind you.</p>
+  <a class="link" href="service-home-dialysis.html">Learn about home dialysis <svg class="flip" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card card--rows-4 card--accent treat-tile">
+  <p class="eyebrow treat-kicker">Nocturnal dialysis</p>
+  <h3 class="card-title"><a href="service-nocturnal.html">Nocturnal dialysis</a></h3>
+  <p class="card-text">Longer, gentler dialysis while you sleep, so your days stay your own.</p>
+  <a class="link" href="service-nocturnal.html">Learn about nocturnal dialysis <svg class="flip" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article></div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-band"><p class="eyebrow">Next step</p><h2 id="cta-title">Talk it through with our team</h2><p>A free 30-minute visit with a nephrologist and nurse to explore whether this treatment suits you.</p><div class="hero-ctas"><a class="btn btn-primary btn-lg" href="contact.html#book">Book a visit</a><a class="btn btn-secondary btn-lg" href="care-team.html">Meet the team</a></div></div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <svg class="footer-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 60V28C180 4 360 0 540 14s360 40 540 30 270-30 360-38v66z"/></svg>
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <a class="brand" href="index.html" aria-label="Tidewell Dialysis Centre, home">
+          <svg class="brand-mark" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+            <rect width="48" height="48" rx="14" class="mark-bg"/>
+            <path d="M24 9c5.5 7 9 11.6 9 16.2A9 9 0 0 1 15 25.2C15 20.6 18.5 16 24 9z" class="mark-drop"/>
+            <path d="M17.2 27.4c2.3-1.6 4.5-1.6 6.8 0s4.5 1.6 6.8 0" class="mark-wave"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Tidewell</span><span class="brand-sub">Dialysis Centre</span></span>
+        </a>
+
+        <p class="f-desc">Calm, unhurried dialysis care in Chennai and Bengaluru: in-centre, at home and overnight, with one care team that knows you by name.</p>
+        <ul class="f-contact">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>14 Marina Crescent, Besant Nagar, Chennai 600090</span></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+914449602210"><span class="ltr-num">+91 44 4960 2210</span></a></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:care@tidewell.example">care@tidewell.example</a></li>
+        </ul>
+      </div>
+
+      <nav class="f-col" aria-labelledby="f-quick">
+        <h2 id="f-quick">Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home-2.html">Home 2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="care-team.html">Care Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-labelledby="f-treat">
+        <h2 id="f-treat">Treatments</h2>
+        <ul>
+          <li><a href="service-haemodialysis.html">In-centre haemodialysis</a></li>
+          <li><a href="service-home-dialysis.html">Home haemodialysis</a></li>
+          <li><a href="service-peritoneal.html">Peritoneal dialysis</a></li>
+          <li><a href="service-nocturnal.html">Nocturnal dialysis</a></li>
+          <li><a href="services.html#support">Supporting care</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-labelledby="f-support">
+        <h2 id="f-support">Patient support</h2>
+        <ul>
+          <li><a href="contact.html#book">Book a visit</a></li>
+          <li><a href="help.html">Help and FAQ</a></li>
+          <li><a href="login.html">Patient log in</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Tidewell Dialysis Centre. A fictional clinic for demonstration. In an emergency call <a href="tel:108"><span class="ltr-num">108</span></a>.</p>
+      <ul class="social" aria-label="Tidewell on social media">
+        <li><a href="https://www.facebook.com/" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></a></li>
+        <li><a href="https://www.youtube.com/" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

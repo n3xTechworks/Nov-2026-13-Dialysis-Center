@@ -1,0 +1,6 @@
+/* about page styles */
+#story .split-media img { object-position: 50% 25%; }
+#quality .split-media img { object-position: 50% 35%; }
+#community .split-media img { object-position: 50% 25%; }
+.quality-stats { margin-top: var(--s7); }
+.acc-meta { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line); font-size: var(--fs-small); font-weight: 600; color: var(--primary-ink); }

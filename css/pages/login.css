@@ -1,0 +1,11 @@
+/* login: page-specific styles (shared styles live in css/site.css) */
+.link-btn { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--primary-ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; border-radius: 4px; }
+.link-btn:hover { color: var(--primary-hover); }
+.auth-form { gap: var(--s4); }
+.auth-demo { font-size: var(--fs-xs); color: var(--muted); text-align: center; }
+.auth-form .form { gap: var(--s4); }
+.auth-form .sub { font-size: var(--fs-small); }
+.auth-panel .auth-media { min-height: 220px; }
+.btn.is-busy { opacity: .75; pointer-events: none; }
+.form-error svg { width: 20px; height: 20px; flex: none; }
+.social-login { margin-top: 4px; }

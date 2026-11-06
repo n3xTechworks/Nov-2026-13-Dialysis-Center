@@ -1,0 +1,166 @@
+{
+ "team": [
+  {
+   "id": "doc-1",
+   "group": "doctors",
+   "name": "Dr Mei Lin Chua",
+   "role": "Consultant Nephrologist and Medical Director",
+   "specialty": "In-centre haemodialysis, complex dialysis care",
+   "years": 19,
+   "languages": [
+    "English",
+    "Tamil",
+    "Mandarin"
+   ],
+   "centre": "Chennai"
+  },
+  {
+   "id": "doc-2",
+   "group": "doctors",
+   "name": "Dr Peter Mathias",
+   "role": "Senior Consultant Nephrologist",
+   "specialty": "CKD clinic, transplant work-up",
+   "years": 24,
+   "languages": [
+    "English",
+    "Tamil"
+   ],
+   "centre": "Chennai"
+  },
+  {
+   "id": "doc-3",
+   "group": "doctors",
+   "name": "Dr Arjun Menon",
+   "role": "Consultant Nephrologist",
+   "specialty": "Home haemodialysis and peritoneal dialysis",
+   "years": 12,
+   "languages": [
+    "English",
+    "Malayalam",
+    "Hindi"
+   ],
+   "centre": "Bengaluru"
+  },
+  {
+   "id": "doc-4",
+   "group": "doctors",
+   "name": "Dr Kavya Sharma",
+   "role": "Consultant Nephrologist",
+   "specialty": "Nocturnal dialysis, heart and kidney health",
+   "years": 10,
+   "languages": [
+    "English",
+    "Hindi",
+    "Kannada"
+   ],
+   "centre": "Bengaluru"
+  },
+  {
+   "id": "nurse-1",
+   "group": "nurses",
+   "name": "Anita Joseph",
+   "role": "Nurse Manager",
+   "specialty": "In-centre unit, patient safety",
+   "years": 16,
+   "languages": [
+    "English",
+    "Tamil",
+    "Malayalam"
+   ],
+   "centre": "Chennai"
+  },
+  {
+   "id": "nurse-2",
+   "group": "nurses",
+   "name": "Daniel Mensah",
+   "role": "Senior Dialysis Nurse",
+   "specialty": "Nocturnal sessions",
+   "years": 9,
+   "languages": [
+    "English",
+    "Tamil"
+   ],
+   "centre": "Chennai"
+  },
+  {
+   "id": "nurse-3",
+   "group": "nurses",
+   "name": "Grace Okafor",
+   "role": "Home Therapies Nurse",
+   "specialty": "PD and home haemodialysis training",
+   "years": 11,
+   "languages": [
+    "English",
+    "Kannada"
+   ],
+   "centre": "Bengaluru"
+  },
+  {
+   "id": "nurse-4",
+   "group": "nurses",
+   "name": "Thomas Mathew",
+   "role": "Vascular Access Nurse",
+   "specialty": "Fistula checks and cannulation",
+   "years": 7,
+   "languages": [
+    "English",
+    "Malayalam"
+   ],
+   "centre": "Bengaluru"
+  },
+  {
+   "id": "spec-1",
+   "group": "specialists",
+   "name": "Elena Fernandes",
+   "role": "Renal Dietitian",
+   "specialty": "Indian renal meal plans",
+   "years": 13,
+   "languages": [
+    "English",
+    "Konkani",
+    "Hindi"
+   ],
+   "centre": "Bengaluru"
+  },
+  {
+   "id": "spec-2",
+   "group": "specialists",
+   "name": "Joseph Adeyemi",
+   "role": "Renal Social Worker and Counsellor",
+   "specialty": "Emotional support, schemes and benefits",
+   "years": 11,
+   "languages": [
+    "English",
+    "Tamil"
+   ],
+   "centre": "Chennai"
+  },
+  {
+   "id": "spec-3",
+   "group": "specialists",
+   "name": "Dr Emmanuel Osei",
+   "role": "Vascular Access Surgeon",
+   "specialty": "Fistula and graft surgery",
+   "years": 15,
+   "languages": [
+    "English",
+    "French"
+   ],
+   "centre": "Chennai"
+  },
+  {
+   "id": "spec-4",
+   "group": "specialists",
+   "name": "Mai Nguyen",
+   "role": "Patient Care Coordinator",
+   "specialty": "Scheduling, insurance and travel dialysis",
+   "years": 8,
+   "languages": [
+    "English",
+    "Tamil",
+    "Vietnamese"
+   ],
+   "centre": "Chennai"
+  }
+ ]
+}

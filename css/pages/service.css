@@ -1,0 +1,10 @@
+/* service detail pages (template) */
+.page-hero-bg { object-position: 50% 35%; }
+.section--tight-top { padding-top: 0; }
+#overview .split { align-items: start; }
+#benefits .card-text { margin-bottom: 0; }
+/* treatment tiles have no photo: undo the photo-left trio layout used at tablet widths */
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  #other .cards--trio .card { grid-template-columns: minmax(0, 1fr); }
+  #other .cards--trio .card > * { grid-column: 1; }
+}

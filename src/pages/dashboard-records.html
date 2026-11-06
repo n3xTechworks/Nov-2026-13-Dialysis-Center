@@ -1,0 +1,63 @@
+---
+layout: app
+title: Treatment records | Tidewell patient dashboard
+description: Your lab results and trends, prescriptions, care plan and documents, ready to share with your doctor.
+app_nav: records
+app_title: Treatment records
+css: dashboard-records
+js: dashboard-records
+---
+<div class="page-head"><div><h1>Treatment records</h1><p>Monthly blood tests, medicines and care documents. Results appear here after your nephrologist has reviewed them.</p></div>
+  <div class="page-head-actions"><button class="btn btn-primary" type="button" data-modal-open="m-share">Share with a doctor</button></div></div>
+
+<section class="widget" aria-labelledby="tr-title">
+  <div class="w-head"><h2 id="tr-title">Lab trends</h2><span class="result-note" id="trendNote"></span></div>
+  <div class="chips metric-chips" role="group" aria-label="Choose a lab result" id="metricChips"></div>
+  <div class="trend-wrap">
+    <div id="trendChart"></div>
+    <div class="trend-side" id="trendSide" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="widget" aria-labelledby="lab-title">
+  <div class="w-head"><h2 id="lab-title">Lab results</h2><button class="btn btn-secondary btn-sm" type="button" id="labCsv">Download results</button></div>
+  <div class="table-wrap"><table class="table lab-table"><thead><tr><th scope="col">Date</th><th scope="col">Haemoglobin <small>g/dL</small></th><th scope="col">Potassium <small>mmol/L</small></th><th scope="col">Phosphate <small>mg/dL</small></th><th scope="col">Albumin <small>g/dL</small></th><th scope="col">Kt/V</th></tr></thead><tbody id="labRows"></tbody></table></div>
+  <p class="panel-note"><span class="flag-key"></span> Outside your target range. Your nephrologist reviews every result at your monthly round.</p>
+</section>
+
+<div class="dash-two">
+  <section class="widget" aria-labelledby="rx-title">
+    <div class="w-head"><h2 id="rx-title">Prescriptions</h2><span class="badge" id="rxCount">0</span></div>
+    <div class="row-list" id="rxList"></div>
+  </section>
+  <section class="widget" aria-labelledby="doc-title">
+    <div class="w-head"><h2 id="doc-title">Care plan and documents</h2></div>
+    <div class="care-plan widget--mint" id="carePlan"></div>
+    <div class="row-list" id="docList"></div>
+  </section>
+</div>
+
+<div class="modal" id="m-share" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog modal-dialog--wide" role="dialog" aria-modal="true" aria-labelledby="m-share-title" tabindex="-1">
+    <button class="modal-x" type="button" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="m-share-title">Share records with a doctor</h2>
+    <p>We send a secure link that expires after 7 days. You can stop sharing at any time.</p>
+    <form class="form" data-validate novalidate id="shareForm">
+      <div class="form-grid">
+        <div class="field"><label for="sh-name">Doctor's name</label><input id="sh-name" name="doctor-name" type="text" placeholder="Dr Ravi Kumar" required></div>
+        <div class="field"><label for="sh-email">Doctor's email</label><input id="sh-email" name="email" type="email" placeholder="doctor@hospital.example" required></div>
+        <div class="field field--full"><span class="label" id="sh-what">What to share</span>
+          <div class="share-checks" role="group" aria-labelledby="sh-what">
+            <label class="check"><input type="checkbox" name="share-labs" checked> Lab results (6 months)</label>
+            <label class="check"><input type="checkbox" name="share-rx" checked> Prescriptions</label>
+            <label class="check"><input type="checkbox" name="share-sessions"> Session history</label>
+            <label class="check"><input type="checkbox" name="share-plan" checked> Care plan</label>
+          </div><p class="field-error" id="shWhatErr" role="alert"></p></div>
+        <div class="field field--full"><label for="sh-note">Note (optional)</label><textarea id="sh-note" name="note" rows="3" placeholder="For example: second opinion before my fistula review"></textarea></div>
+      </div>
+      <div class="modal-actions"><button class="btn btn-secondary" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="submit">Send secure link</button></div>
+    </form>
+  </div>
+</div>
+<script defer src="js/pages/dashboard-data.js"></script>

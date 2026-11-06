@@ -1,0 +1,182 @@
+---
+title: Contact and book a visit | Tidewell Dialysis Centre
+description: Book a consultation or visit, call our centres, find us on the map and read common questions.
+nav: contact
+hero: hero-contact
+hero_alt: A friendly receptionist welcoming a visitor at the front desk
+crumbs: Contact
+eyebrow: Contact us
+h1: We are here to help
+lead: Book a visit, ask a question or find your nearest Tidewell centre.
+---
+<section class="section" id="reach" aria-labelledby="reach-title">
+  <div class="container">
+    <header class="intro intro--center">
+      <p class="eyebrow">Get in touch</p>
+      <h2 id="reach-title">Talk to a real person, the same day</h2>
+      <p>Our patient coordinators answer calls and emails six days a week, and a nephrologist is on call at all hours.</p>
+    </header>
+    <div class="cards cards--4 contact-cards">
+      <article class="card card--rows-4 card--accent">
+        <span class="pebble"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+        <h3 class="card-title">Call us</h3>
+        <p class="card-text">Monday to Saturday, 6:00 to 22:00. Ask for appointments, transport or a callback from a nurse.</p>
+        <a class="link" href="tel:+914449602210"><span class="ltr-num">+91 44 4960 2210</span></a>
+      </article>
+      <article class="card card--rows-4 card--accent">
+        <span class="pebble pebble--sand"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>
+        <h3 class="card-title">Write to us</h3>
+        <p class="card-text">Send reports, referral letters or questions. We reply within one working day.</p>
+        <a class="link" href="mailto:care@tidewell.example">care@tidewell.example</a>
+      </article>
+      <article class="card card--rows-4 card--accent">
+        <span class="pebble"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <h3 class="card-title">Visit a centre</h3>
+        <p class="card-text">Besant Nagar and Anna Nagar in Chennai, and Indiranagar in Bengaluru. Free parking at all three.</p>
+        <a class="link" href="#map">See our locations <svg class="flip" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="card card--rows-4 card--accent">
+        <span class="pebble pebble--coral"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+        <h3 class="card-title">In an emergency</h3>
+        <p class="card-text">For chest pain, severe breathlessness or heavy bleeding from your access, call an ambulance first.</p>
+        <a class="link" href="tel:108">Call 108 now</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+{{wave bg-tint}}
+<section class="section section--tint" id="book" aria-labelledby="book-title">
+  <div class="container">
+    <header class="intro intro--center">
+      <p class="eyebrow">Book a visit</p>
+      <h2 id="book-title">Book a free visit or consultation</h2>
+      <p>Tell us a little about yourself and when suits you. A coordinator will call to confirm within one working day.</p>
+    </header>
+    <div class="book-grid">
+      <div class="form-card">
+        <form class="form" data-validate novalidate data-success-message="Thank you. Your visit request is in, and a coordinator will call you within one working day to confirm.">
+          <div class="form-grid">
+            <div class="field">
+              <label for="bk-name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input id="bk-name" name="name" type="text" autocomplete="name" placeholder="e.g. Lakshmi Raman" required>
+            </div>
+            <div class="field">
+              <label for="bk-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="bk-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+            </div>
+            <div class="field">
+              <label for="bk-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+              <input id="bk-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="98765 43210" required>
+            </div>
+            <div class="field">
+              <label for="bk-centre">Preferred centre <span class="req" aria-hidden="true">*</span></label>
+              <select id="bk-centre" name="centre" required>
+                <option value="">Choose a centre</option>
+                <option>Chennai, Besant Nagar</option>
+                <option>Chennai, Anna Nagar</option>
+                <option>Bengaluru, Indiranagar</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bk-date">Preferred date <span class="req" aria-hidden="true">*</span></label>
+              <input id="bk-date" name="date" type="date" required>
+              <span class="field-hint">Today or any later date.</span>
+            </div>
+            <div class="field">
+              <label for="bk-treat">Treatment interest <span class="req" aria-hidden="true">*</span></label>
+              <select id="bk-treat" name="treatment" required>
+                <option value="">Choose a treatment</option>
+                <option>In-centre haemodialysis</option>
+                <option>Home haemodialysis</option>
+                <option>Peritoneal dialysis</option>
+                <option>Nocturnal dialysis</option>
+                <option>CKD clinic (not yet on dialysis)</option>
+                <option>Holiday dialysis</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="bk-msg">Message <span class="field-hint">(optional)</span></label>
+              <textarea id="bk-msg" name="message" rows="4" placeholder="Anything we should know, such as current treatment, access or mobility needs"></textarea>
+            </div>
+            <div class="field field--full">
+              <label class="check"><input type="checkbox" name="consent" required> <span>I agree that Tidewell may contact me about this request and store my details as described in the <a href="privacy.html">Privacy Policy</a>.</span></label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary btn-lg" type="submit">Request my visit</button>
+            <span class="field-hint">Visits are free and take about 45 minutes.</span>
+          </div>
+          <p class="form-success" data-form-success role="status" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-success-text>Thank you. We will be in touch soon.</span></p>
+        </form>
+      </div>
+      <aside class="book-side" aria-label="What happens next">
+        <div class="book-photo"><img src="images/book-step-800.webp" srcset="images/book-step-800.webp 800w, images/book-step-1600.webp 1600w" sizes="(min-width: 1024px) 40vw, 100vw" width="800" height="533" alt="An open appointment planner on a desk, ready to book a visit" loading="lazy" decoding="async"></div>
+        <div class="book-next">
+          <h3>What happens next</h3>
+          <ol class="how-steps">
+            <li><span class="how-num" aria-hidden="true">1</span><p>A coordinator calls to confirm your date and time.</p></li>
+            <li><span class="how-num" aria-hidden="true">2</span><p>You tour the centre and meet a nurse and nephrologist.</p></li>
+            <li><span class="how-num" aria-hidden="true">3</span><p>We send a written summary of your options and costs.</p></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+{{wave tint-bg b}}
+
+<section class="section" id="map" aria-labelledby="map-title">
+  <div class="container">
+    <header class="intro intro--center">
+      <p class="eyebrow">Our centres</p>
+      <h2 id="map-title">Three calm centres in two cities</h2>
+      <p>All centres are step-free, have wheelchair access and offer parking or a pick-up point at the door.</p>
+    </header>
+    <div class="map-grid">
+      <ul class="centre-list">
+        <li class="centre">
+          <h3>Chennai, Besant Nagar <span class="badge badge--sand">Head office</span></h3>
+          <p>14 Marina Crescent, Besant Nagar, Chennai 600090</p>
+          <p><a href="tel:+914449602210"><span class="ltr-num">+91 44 4960 2210</span></a> · Sleep rooms for nocturnal dialysis</p>
+        </li>
+        <li class="centre">
+          <h3>Chennai, Anna Nagar</h3>
+          <p>7 Park View Road, Anna Nagar, Chennai 600040</p>
+          <p><a href="tel:+914449602290"><span class="ltr-num">+91 44 4960 2290</span></a> · CKD clinic and in-centre dialysis</p>
+        </li>
+        <li class="centre">
+          <h3>Bengaluru, Indiranagar</h3>
+          <p>22 Lakeview Road, Indiranagar, Bengaluru 560038</p>
+          <p><a href="tel:+918049603315"><span class="ltr-num">+91 80 4960 3315</span></a> · Home therapies training hub</p>
+        </li>
+      </ul>
+      <div class="map-frame">
+        <iframe title="Map showing Tidewell Dialysis Centre, Besant Nagar, Chennai" src="https://www.google.com/maps?q=Besant%20Nagar%2C%20Chennai%20600090&amp;output=embed" width="800" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{wave bg-sand}}
+<section class="section section--sand" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <header class="intro intro--center">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <p>Quick answers about visits, referrals and costs. There is more in our <a href="help.html">help centre</a>.</p>
+    </header>
+    <div class="faq">
+      <div class="faq-list">
+        <details class="faq-item" name="faq-contact"><summary>Do I need a referral to book a visit?</summary><div class="faq-answer"><p>No. Anyone can book a free visit. If you decide to start treatment with us, we will ask for a referral letter and recent results from your current kidney doctor, and we can request them for you.</p></div></details>
+        <details class="faq-item" name="faq-contact"><summary>What should I bring to my first visit?</summary><div class="faq-answer"><p>Bring your latest blood tests, a list of your medicines, any discharge summaries and your insurance or scheme card. A family member or friend is very welcome to come with you.</p></div></details>
+        <details class="faq-item" name="faq-contact"><summary>How quickly can I start dialysis with you?</summary><div class="faq-answer"><p>For people already on dialysis elsewhere, we can usually offer a regular slot within one to two weeks once your viral screening results are in. Urgent starts are discussed with the on-call nephrologist the same day.</p></div></details>
+        <details class="faq-item" name="faq-contact"><summary>Do you accept insurance and government schemes?</summary><div class="faq-answer"><p>Yes. We work with most major insurers, CGHS and state dialysis schemes, including the Pradhan Mantri National Dialysis Programme where eligible. Our coordinators help with pre-authorisation and paperwork.</p></div></details>
+        <details class="faq-item" name="faq-contact"><summary>Can I arrange holiday dialysis at Tidewell?</summary><div class="faq-answer"><p>Yes. Visiting patients are welcome at all three centres. Please contact us at least four weeks before you travel so we can collect your reports and hold a slot.</p></div></details>
+        <details class="faq-item" name="faq-contact"><summary>Is there transport to and from sessions?</summary><div class="faq-answer"><p>We run a shared pick-up service within 8 km of each centre and can help you arrange a wheelchair-accessible taxi. Ask your coordinator to add you to the transport list.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+{{wave sand-bg b}}

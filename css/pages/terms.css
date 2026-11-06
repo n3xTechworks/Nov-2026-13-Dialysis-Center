@@ -1,0 +1,6 @@
+/* terms: tabbed sections */
+.terms-tabs .tabs { justify-content: center; }
+.terms-tabs .tab-panel { margin-inline: auto; }
+.terms-tabs .tab-panel h2:first-child { margin-top: 0; }
+.terms-tabs .tab-panel:focus-visible { outline: 2px solid var(--primary); outline-offset: 6px; border-radius: var(--r-sm); }
+.legal-body a { font-weight: 600; }

@@ -1,0 +1,76 @@
+---
+nav: services
+css: service
+js: service
+---
+<!-- Service detail template (front matter of the page: template: service + service: <slug>). Data: data/services.json -->
+<section class="section" id="overview" aria-labelledby="ov-title">
+  <div class="container">
+    <div class="split">
+      <div class="split-body">
+        <p class="eyebrow">Who it suits</p>
+        <h2 id="ov-title">Is this treatment right for you?</h2>
+        <p>{{s.summary}}</p>
+        {{service_suits}}
+      </div>
+      {{service_facts}}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight-top" id="benefits" aria-labelledby="ben-title">
+  <div class="container">
+    <header class="intro intro--center"><p class="eyebrow">Benefits</p><h2 id="ben-title">{{ben_h}}</h2><p>{{ben_p}}</p></header>
+    <div class="cards cards--4">
+      <article class="card card--rows-3 card--accent"><span class="pebble"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><h3 class="card-title">{{ben1_t}}</h3><p class="card-text">{{ben1_p}}</p></article>
+      <article class="card card--rows-3 card--accent"><span class="pebble pebble--coral"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3 class="card-title">{{ben2_t}}</h3><p class="card-text">{{ben2_p}}</p></article>
+      <article class="card card--rows-3 card--accent"><span class="pebble pebble--sand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h3 class="card-title">{{ben3_t}}</h3><p class="card-text">{{ben3_p}}</p></article>
+      <article class="card card--rows-3 card--accent"><span class="pebble"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5a5 5 0 0 1 5.5 5"/></svg></span><h3 class="card-title">{{ben4_t}}</h3><p class="card-text">{{ben4_p}}</p></article>
+    </div>
+  </div>
+</section>
+
+{{wave bg-tint}}
+<section class="section section--tint" id="how" aria-labelledby="how-title">
+  <div class="container container-narrow">
+    <header class="intro intro--center"><p class="eyebrow">How it works</p><h2 id="how-title">What happens, step by step</h2><p>Your nurse explains every step before it happens. Nothing is rushed.</p></header>
+    {{service_how}}
+  </div>
+</section>
+{{wave tint-bg b}}
+
+<section class="section" id="timeline" aria-labelledby="tl-title">
+  <div class="container">
+    <header class="intro intro--center"><p class="eyebrow">A typical session</p><h2 id="tl-title">Your session timeline</h2><p>Times are examples; your shift is agreed with you.</p></header>
+    {{service_timeline}}
+  </div>
+</section>
+
+<section class="section section--sand" id="bring" aria-labelledby="bring-title">
+  <div class="container">
+    <div class="split">
+      <div class="split-body"><p class="eyebrow">Be prepared</p><h2 id="bring-title">What to bring</h2>{{service_bring}}</div>
+      {{service_cost}}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <header class="intro intro--center"><p class="eyebrow">Questions</p><h2 id="faq-title">Common questions</h2><p>Ask us anything else at your first visit.</p></header>
+    {{service_faq}}
+  </div>
+</section>
+
+<section class="section section--tint" id="other" aria-labelledby="other-title">
+  <div class="container">
+    <header class="intro intro--center"><p class="eyebrow">Compare</p><h2 id="other-title">Other ways to dialyse</h2><p>Many people change treatment over the years. We support every option.</p></header>
+    {{service_others}}
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-band"><p class="eyebrow">Next step</p><h2 id="cta-title">Talk it through with our team</h2><p>A free 30-minute visit with a nephrologist and nurse to explore whether this treatment suits you.</p><div class="hero-ctas"><a class="btn btn-primary btn-lg" href="contact.html#book">Book a visit</a><a class="btn btn-secondary btn-lg" href="care-team.html">Meet the team</a></div></div>
+  </div>
+</section>

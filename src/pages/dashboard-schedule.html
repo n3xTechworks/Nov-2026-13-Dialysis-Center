@@ -1,0 +1,109 @@
+---
+layout: app
+title: Schedule | Tidewell patient dashboard
+description: Book, reschedule or cancel your dialysis sessions at any Tidewell centre.
+app_nav: schedule
+app_title: Schedule
+css: dashboard-schedule
+js: dashboard-schedule
+---
+<div class="page-head"><div><h1>Book a dialysis session</h1><p>Choose a centre, day, shift and chair. Changes are free up to 24 hours before.</p></div></div>
+
+<div class="sch-layout">
+  <div class="sch-main">
+    <section class="widget" aria-labelledby="c-title">
+      <div class="w-head"><h2 id="c-title"><span class="step-n" aria-hidden="true">1</span>Centre</h2></div>
+      <div class="centre-grid" role="radiogroup" aria-labelledby="c-title" id="centreGrid"></div>
+    </section>
+
+    <section class="widget" aria-labelledby="d-title">
+      <div class="w-head"><h2 id="d-title"><span class="step-n" aria-hidden="true">2</span>Day</h2>
+        <div class="week-nav"><button class="btn btn-secondary btn-sm btn-icon" type="button" id="wkPrev" aria-label="Previous week"><svg class="flip" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button><span id="wkLabel" aria-live="polite">This week</span><button class="btn btn-secondary btn-sm btn-icon" type="button" id="wkNext" aria-label="Next week"><svg class="flip" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></div>
+      </div>
+      <div class="day-pills" role="group" aria-labelledby="d-title" id="dayPills"></div>
+      <p class="field-hint">Sundays are closed for routine sessions. A dot means you already have a session that day.</p>
+    </section>
+
+    <section class="widget" aria-labelledby="t-title">
+      <div class="w-head"><h2 id="t-title"><span class="step-n" aria-hidden="true">3</span>Time</h2></div>
+      <div id="shiftBox" aria-live="polite"></div>
+    </section>
+
+    <section class="widget" aria-labelledby="o-title">
+      <div class="w-head"><h2 id="o-title"><span class="step-n" aria-hidden="true">4</span>Chair and extras</h2></div>
+      <div class="chair-grid" role="radiogroup" aria-label="Chair type" id="chairGrid"></div>
+      <div class="extras">
+        <div class="extra">
+          <label class="switch"><input type="checkbox" role="switch" id="optTransport"> Request transport</label>
+          <p class="field-hint">Free pickup and drop within 10 km of the centre. The driver calls 30 minutes before.</p>
+          <div class="field extra-more" id="pickupField" hidden><label for="pickupAddr">Pickup address</label><input id="pickupAddr" type="text" placeholder="House number, street, area"></div>
+        </div>
+        <div class="extra">
+          <label class="switch"><input type="checkbox" role="switch" id="optRepeat"> Make it recurring</label>
+          <p class="field-hint">Book the same time on a regular pattern, like most patients do.</p>
+          <div class="extra-more" id="repeatBox" hidden>
+            <div class="chips" role="radiogroup" aria-label="Repeat pattern" id="patternChips">
+              <button class="chip" type="button" role="radio" data-pattern="1,3,5" aria-checked="true" aria-pressed="true">Mon / Wed / Fri</button>
+              <button class="chip" type="button" role="radio" data-pattern="2,4,6" aria-checked="false" aria-pressed="false">Tue / Thu / Sat</button>
+            </div>
+            <div class="field"><label for="repeatWeeks">For</label><select id="repeatWeeks"><option value="2">2 weeks</option><option value="4" selected>4 weeks</option><option value="8">8 weeks</option></select></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sch-side" aria-labelledby="sum-title">
+    <section class="widget widget--mint sum-card">
+      <h2 id="sum-title">Your booking</h2>
+      <dl class="summary-list" id="sumList"></dl>
+      <p class="field-error" id="bookError" role="alert"></p>
+      <button class="btn btn-primary btn-block btn-lg" type="button" id="reviewBtn">Review and confirm</button>
+      <button class="btn btn-secondary btn-block" type="button" id="clearBtn">Start again</button>
+    </section>
+  </aside>
+</div>
+
+<section class="widget" aria-labelledby="up-title" id="upcoming">
+  <div class="w-head"><h2 id="up-title">Upcoming sessions <span class="badge" id="upCount">0</span></h2><button class="btn btn-secondary btn-sm" type="button" id="upCal">Download all to calendar</button></div>
+  <div class="up-list" id="upList"></div>
+</section>
+
+<div class="modal" id="m-confirm" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="m-confirm-title" tabindex="-1">
+    <button class="modal-x" type="button" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="m-confirm-title">Confirm your booking</h2>
+    <p id="cfLead">Please check the details below.</p>
+    <div class="modal-body"><dl class="summary-list" id="cfList"></dl><ul class="cf-dates" id="cfDates"></ul></div>
+    <div class="modal-actions"><button class="btn btn-secondary" type="button" data-modal-close>Go back</button><button class="btn btn-primary" type="button" id="cfBtn">Confirm booking</button></div>
+  </div>
+</div>
+
+<div class="modal" id="m-resched" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog modal-dialog--wide" role="dialog" aria-modal="true" aria-labelledby="m-resched-title" tabindex="-1">
+    <button class="modal-x" type="button" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="m-resched-title">Reschedule session</h2>
+    <p id="rsCurrent">Currently booked.</p>
+    <div class="modal-body">
+      <div class="w-head rs-head"><span class="label" id="rsDayLbl">New day</span><div class="week-nav"><button class="btn btn-secondary btn-sm btn-icon" type="button" id="rsPrev" aria-label="Previous week"><svg class="flip" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button><span id="rsWk">This week</span><button class="btn btn-secondary btn-sm btn-icon" type="button" id="rsNext" aria-label="Next week"><svg class="flip" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></div></div>
+      <div class="day-pills day-pills--sm" role="group" aria-labelledby="rsDayLbl" id="rsDays"></div>
+      <span class="label">New time</span>
+      <div id="rsTimes" aria-live="polite"></div>
+    </div>
+    <div class="modal-actions"><button class="btn btn-secondary" type="button" data-modal-close>Keep current time</button><button class="btn btn-primary" type="button" id="rsConfirm" disabled>Pick a day and time</button></div>
+  </div>
+</div>
+
+<div class="modal" id="m-cancel" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="m-cancel-title" tabindex="-1">
+    <button class="modal-x" type="button" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="m-cancel-title">Cancel this session?</h2>
+    <p id="cnText">Missing dialysis can be risky. If you are unwell, please call the unit so we can advise you.</p>
+    <div class="modal-body"><div class="field"><label for="cnReason">Reason</label><select id="cnReason"><option value="">Choose a reason</option><option>I am in hospital</option><option>I am travelling</option><option>I need a different time</option><option>Other</option></select><p class="field-error" id="cnError" role="alert"></p></div></div>
+    <div class="modal-actions"><button class="btn btn-secondary" type="button" data-modal-close>Keep session</button><button class="btn btn-danger" type="button" id="cnConfirm">Cancel session</button></div>
+  </div>
+</div>
+<script defer src="js/pages/dashboard-data.js"></script>

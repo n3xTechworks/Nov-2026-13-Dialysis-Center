@@ -1,0 +1,22 @@
+/* Home 1 */
+.team-names { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line-strong); font-size: var(--fs-small); color: var(--ink); font-weight: 500; }
+.why-split { align-items: center; }
+@media (min-width: 900px) { .why-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.facility-card .meta svg { color: var(--ok); }
+/* Home 1 hero photo framing: layout and centred text are unchanged; only the photo is re-framed.
+   Desktop: photo shifted up so the nurse's face sits above the eyebrow pill and the patient's face sits
+   left of the buttons and above the stat cards. Mobile: photo slid so both people stay in the frame. */
+.hero-bg { object-position: 45% 22%; }
+@media (max-width: 1023.98px) {
+  /* same lighter haze idea as laptop: clear photo, with just enough veil behind the words to keep them readable */
+  .hero-shade { background: radial-gradient(ellipse 85% 58% at 50% 44%, rgba(251, 250, 247, .64) 0%, rgba(251, 250, 247, .4) 60%, rgba(251, 250, 247, .04) 100%); }
+  html[data-theme="dark"] .hero-shade { background: radial-gradient(ellipse 85% 58% at 50% 44%, rgba(8, 26, 31, .78) 0%, rgba(8, 26, 31, .55) 60%, rgba(8, 26, 31, .15) 100%); }
+  .hero h1, .hero-lead { text-shadow: 0 1px 14px rgba(251, 250, 247, .95), 0 0 2px rgba(251, 250, 247, .8); }
+  html[data-theme="dark"] .hero h1, html[data-theme="dark"] .hero-lead { text-shadow: 0 1px 14px rgba(8, 26, 31, .95), 0 0 2px rgba(8, 26, 31, .8); }
+}
+@media (min-width: 1024px) {
+  .hero-bg { object-position: center 74%; }
+  /* lighter haze, kept tight behind the words only, so both faces read clearly */
+  .hero-shade { background: radial-gradient(ellipse 40% 50% at 50% 52%, rgba(251, 250, 247, .8) 0%, rgba(251, 250, 247, .56) 55%, rgba(251, 250, 247, 0) 100%); }
+  html[data-theme="dark"] .hero-shade { background: radial-gradient(ellipse 40% 50% at 50% 52%, rgba(8, 26, 31, .82) 0%, rgba(8, 26, 31, .6) 55%, rgba(8, 26, 31, .12) 100%); }
+}

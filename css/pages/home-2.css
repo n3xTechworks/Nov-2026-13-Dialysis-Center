@@ -1,0 +1,9 @@
+/* home-2 page styles */
+.hero-home2 .hero-bg { object-position: 50% 30%; }
+.section--tight-top { padding-top: 0; }
+.visit-card .card-media img { object-position: 50% 40%; }
+.visit-card .card-media img.pos-top { object-position: 50% 22%; }
+#family .split-media img { object-position: 50% 25%; }
+#comfort .split-media img { object-position: 50% 50%; }
+.visit-card .card-kicker span:last-child { font-size: var(--fs-small); }
+#family { padding-bottom: clamp(32px, 4vw, 56px); }

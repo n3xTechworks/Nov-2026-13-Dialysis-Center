@@ -1,0 +1,66 @@
+---
+layout: auth
+title: Create an account | Tidewell
+description: Create your Tidewell account.
+---
+<main id="main" class="auth">
+  <section class="auth-panel" aria-label="About Tidewell">
+    {{> logo}}
+    <h1>Your dialysis care, in one calm place.</h1>
+    <ul class="auth-points">
+      <li><strong>Manage your sessions</strong><span>Book, swap or cancel dialysis shifts any time.</span></li>
+      <li><strong>See your results</strong><span>Lab trends, prescriptions and care plans together.</span></li>
+      <li><strong>Billing made simple</strong><span>Invoices, insurance cover and secure payments.</span></li>
+    </ul>
+    <div class="auth-media"><img src="images/signup-image-1600.webp" srcset="images/signup-image-800.webp 800w, images/signup-image-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1067" alt="An older patient smiling with family outdoors on a sunny day"></div>
+  </section>
+  <section class="auth-form-wrap" aria-labelledby="auth-title">
+    <div class="auth-form">
+      <div><h2 id="auth-title">Create your account</h2><p class="sub" id="suSub">Free to use. We never sell your data.</p></div>
+      <ol class="stepper auth-steps" aria-label="Sign-up progress" id="suSteps"><li class="is-current"><span>Account</span></li><li><span>Verify</span></li><li><span>Preferences</span></li></ol>
+      <div data-su-step="1">
+        <form class="form" data-validate novalidate id="suForm" data-no-reset>
+          <div class="form-grid">
+            <div class="field"><label for="s-first">First name <span class="req" aria-hidden="true">*</span></label><input id="s-first" name="first-name" data-rule="name" type="text" autocomplete="given-name" placeholder="Priya" required></div>
+            <div class="field"><label for="s-last">Last name <span class="req" aria-hidden="true">*</span></label><input id="s-last" name="last-name" data-rule="name" type="text" autocomplete="family-name" placeholder="Raman" required></div>
+            <div class="field field--full"><label for="s-email">Email address <span class="req" aria-hidden="true">*</span></label><input id="s-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+            <div class="field field--full"><label for="s-phone">Mobile number <span class="req" aria-hidden="true">*</span></label><input id="s-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="9840012345" required><p class="field-hint">For session reminders only. Digits only, 10-digit mobile.</p></div>
+            <div class="field field--full"><label for="s-pw">Create a password <span class="req" aria-hidden="true">*</span></label><div class="pw-wrap"><input id="s-pw" name="new-password" type="password" autocomplete="new-password" data-rule="password" placeholder="At least 8 characters" required><button class="pw-toggle" type="button" data-pw-toggle aria-label="Show password">Show</button></div>
+              <div class="pw-meter" id="pwMeter" aria-hidden="true"><span></span><span></span><span></span><span></span></div><p class="field-hint" id="pwHint" aria-live="polite">At least 8 characters, with a letter and a number.</p></div>
+            <div class="field field--full"><label class="check"><input type="checkbox" name="terms" required> <span>I agree to the <a class="link" href="terms.html" target="_blank" rel="noopener">terms</a> and <a class="link" href="privacy.html" target="_blank" rel="noopener">privacy notice</a>.</span></label></div>
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Create account</button>
+        </form>
+<div class="social-login"><p class="divider-text" style="width:100%">Or continue with</p>
+  <div class="social-login-row">
+    <button class="btn-social" type="button" aria-label="Continue with Google" data-toast="Google sign-in is a demo only" data-toast-type="info"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" stroke="none" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="#34A853" stroke="none" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1a6 6 0 0 1-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="#FBBC05" stroke="none" d="M6.4 14a6 6 0 0 1 0-4V7.4H3.1a10 10 0 0 0 0 9.2z"/><path fill="#EA4335" stroke="none" d="M12 6c1.5 0 2.8.5 3.9 1.5l2.9-2.9A10 10 0 0 0 3.1 7.4L6.4 10A6 6 0 0 1 12 6z"/></svg></button>
+    <button class="btn-social" type="button" aria-label="Continue with Apple" data-toast="Apple sign-in is a demo only" data-toast-type="info"><svg class="glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 1.43c0 1.14-.46 2.22-1.2 3.01-.8.84-2.1 1.5-3.15 1.4-.13-1.1.42-2.25 1.15-3 .82-.85 2.22-1.46 3.2-1.41zM20.5 17.1c-.55 1.27-.8 1.84-1.5 2.96-.98 1.57-2.37 3.52-4.09 3.54-1.53.02-1.92-.99-4-.98-2.07.01-2.5 1-4.04.99-1.72-.02-3.04-1.78-4.02-3.35C.1 15.9-.2 10.7 1.7 7.9 3.05 5.92 5.18 4.76 7.17 4.76c2.02 0 3.3 1.1 4.97 1.1 1.62 0 2.6-1.1 4.95-1.1 1.77 0 3.65.96 4.99 2.62-4.38 2.4-3.67 8.64.42 9.72z"/></svg></button>
+  </div></div>
+        <p class="auth-legal" style="text-align:center">Already registered? <a class="link" href="login.html">Log in</a></p>
+      </div>
+      <div data-su-step="2" hidden>
+        <form class="form" id="verifyForm" data-validate novalidate data-no-reset>
+          <p class="sub-lead">We sent a 6-digit code to <strong id="verifyEmail">your email</strong>. It expires in 10 minutes.</p>
+          <fieldset class="code-field"><legend class="sr-only">6-digit verification code</legend>
+            <div class="code-row" id="codeRow"><input class="code-input" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1"><input class="code-input" inputmode="numeric" maxlength="1" aria-label="Digit 2"><input class="code-input" inputmode="numeric" maxlength="1" aria-label="Digit 3"><input class="code-input" inputmode="numeric" maxlength="1" aria-label="Digit 4"><input class="code-input" inputmode="numeric" maxlength="1" aria-label="Digit 5"><input class="code-input" inputmode="numeric" maxlength="1" aria-label="Digit 6"></div>
+            <p class="field-error" id="codeError" role="alert"></p>
+            <p class="field-hint">Demo only: any 6 digits work, for example 123456.</p>
+          </fieldset>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Verify email</button>
+          <div class="auth-row"><button class="link-btn" type="button" id="resendCode">Resend code</button><button class="link-btn" type="button" data-su-back="1">Use a different email</button></div>
+        </form>
+      </div>
+      <div data-su-step="3" hidden>
+        <form class="form" id="prefForm" data-validate novalidate data-no-reset>
+          <p class="sub-lead">Last step. A few details so your care team can prepare your first session.</p>
+          <div class="field"><label for="p-room">Preferred centre</label><select id="p-room" name="centre"><option value="besant">Tidewell Chennai (Besant Nagar)</option><option value="annanagar">Tidewell Chennai (Anna Nagar)</option><option value="indiranagar">Tidewell Bengaluru (Indiranagar)</option></select></div>
+          <div class="field"><span class="label" id="p-int">Your current treatment</span><div class="chips" role="radiogroup" aria-labelledby="p-int" id="prefChips"><button class="chip" type="button" role="radio" aria-checked="true" aria-pressed="true" data-v="In-centre haemodialysis">In-centre</button><button class="chip" type="button" role="radio" aria-checked="false" aria-pressed="false" data-v="Home haemodialysis">Home dialysis</button><button class="chip" type="button" role="radio" aria-checked="false" aria-pressed="false" data-v="Peritoneal dialysis">Peritoneal</button><button class="chip" type="button" role="radio" aria-checked="false" aria-pressed="false" data-v="Not started yet">Not started yet</button></div></div>
+          <div class="field"><label for="p-shift">Preferred shift</label><select id="p-shift" name="shift"><option value="morning">Morning (06:30 to 11:00)</option><option value="afternoon">Afternoon (11:30 to 16:00)</option><option value="evening">Evening (16:30 to 21:00)</option></select></div>
+          <div class="pref-switches"><label class="switch"><input type="checkbox" role="switch" name="sms" checked> Session reminders by SMS</label><label class="switch"><input type="checkbox" role="switch" name="launch"> Kidney-care tips by email</label></div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Finish and go to dashboard</button>
+          <button class="btn btn-secondary btn-block" type="button" id="skipPref">Skip for now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

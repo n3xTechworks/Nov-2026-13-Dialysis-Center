@@ -1,0 +1,18 @@
+/* dashboard-sessions */
+@import url("dash-common.css");
+.stat-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); }
+.stat-card .stat-value small { font-family: var(--f-body); font-size: 1rem; font-weight: 500; color: var(--muted); margin-inline-start: 4px; }
+.sess-toolbar { margin-bottom: var(--s4); align-items: center; }
+.sess-table { min-width: 820px; }
+.sess-table tbody tr { cursor: pointer; }
+.sess-table tbody tr:focus-visible { outline: 3px solid var(--primary); outline-offset: -3px; }
+.sess-table tr.is-missed td { color: var(--muted); }
+.sess-table .ktv-low { color: var(--warn); font-weight: 600; }
+.drawer .kv { margin-top: 4px; }
+.drawer .status { margin-top: 2px; }
+.bp-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.bp-row > div { flex: 1 1 120px; border: 1px solid var(--line); border-radius: var(--r-md); padding: 12px 14px; }
+.bp-row dt { font-size: var(--fs-xs); color: var(--muted); }
+.bp-row dd { font-family: var(--f-head); font-weight: 600; font-size: 1.125rem; }
+.more-row { display: flex; justify-content: center; margin-top: var(--s4); }
+.more-row:has([hidden]) { display: none; }

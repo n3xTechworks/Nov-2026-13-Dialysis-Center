@@ -1,0 +1,4 @@
+/* 404: big soft code, three distinct actions */
+.nf-code { font-family: var(--f-head); font-weight: 600; font-size: clamp(4.5rem, 3rem + 7vw, 8.5rem); line-height: 1; color: var(--primary); opacity: .9; letter-spacing: -0.02em; }
+.nf-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: var(--s3); }
+@media (max-width: 479.98px) { .nf-actions .btn { width: 100%; } }
