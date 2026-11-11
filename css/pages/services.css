@@ -11,3 +11,6 @@
 .table-hint { margin-top: 10px; text-align: center; font-size: var(--fs-xs); color: var(--muted); }
 @media (min-width: 1100px) { .table-hint { display: none; } }
 .cost-cards { max-width: 1040px; margin-inline: auto; }
+
+/* Treatments (4 main cards): every spec value reserves two lines, so the Session / How often and Where / From rows line up across the cards */
+section[aria-labelledby="treat-title"] .spec-grid dd { min-height: calc(2 * 1.35em); }

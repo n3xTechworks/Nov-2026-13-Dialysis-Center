@@ -768,6 +768,10 @@ html[data-theme="dark"] .cta-band .btn-secondary { color: #fff; border-color: #f
 .social a { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--footer-line); color: var(--footer-ink); }
 .social a:hover { background: rgba(255, 255, 255, .08); }
 .social svg { width: 18px; height: 18px; }
+/* social icons sit under the contact details in the brand column, as filled teal circles so they stand out */
+.f-brand .social { margin-top: 6px; }
+.f-brand .social a { background: #14939C; border-color: #14939C; color: #fff; }
+.f-brand .social a:hover { background: #0E7C86; border-color: #8EDDD3; text-decoration: none; }
 @media (max-width: 1023.98px) {
   .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .f-brand { grid-column: 1 / -1; max-width: none; }
@@ -1534,3 +1538,6 @@ svg.footer-wave { position: absolute; bottom: calc(100% - 1px); inset-inline: 0;
 .mm-list a[aria-current="page"]::before {
   content: ""; position: absolute; inset-block: 10px; inset-inline-start: 0; width: 3px; border-radius: 3px; background: var(--primary);
 }
+
+/* tablets (sidebar collapsed behind the menu button): keep the dashboard top bar frozen at the top for easy access (solid, so content does not show through) */
+@media (min-width: 640px) and (max-width: 1023.98px) { .app-header { position: sticky; top: 0; z-index: 70; background: var(--bg); } }
