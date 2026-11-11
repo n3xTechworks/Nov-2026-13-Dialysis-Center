@@ -41,3 +41,6 @@
 .bal-foot dt { color: var(--muted); }
 .bal-foot dd { font-weight: 600; }
 .pm-top .pm-default { margin-inline-start: auto; padding: 3px 10px; border-radius: 999px; background: var(--primary); color: var(--on-primary); font-size: var(--fs-xs); font-weight: 700; flex: none; }
+/* card brand chip: fixed dark chip with white text in both themes (var(--ink) turns near-white in dark mode, which hid the white label) */
+.pm-top .pm-logo:not(.pm-logo--upi) { background: #10303A; color: #fff; }
+html[data-theme="dark"] .pm-top .pm-logo:not(.pm-logo--upi) { background: #1E4A54; color: #fff; box-shadow: inset 0 0 0 1px #3F7480; }
